@@ -25,13 +25,19 @@ const Styled = styled.button<{ variant: "light" | "dark" }>`
   color: ${({ variant, theme }) =>
     variant === "light" ? theme.primary.dark : theme.primary.light};
   width: 9.5rem;
+  min-height: 3.5rem;
+  font-weight: 500;
   font-size: 0.9375rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 0.5rem;
-
-  &:hover {
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  &:hover,
+  &:active,
+  &:focus {
     background-color: ${({ theme }) => theme.secondary.main};
     color: ${({ theme }) => theme.primary.light};
   }

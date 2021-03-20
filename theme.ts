@@ -1,5 +1,5 @@
 function customMediaQuery(maxWidth: number) {
-  return `@media (max-width: ${maxWidth}px)`;
+  return `@media (min-width: ${maxWidth}px)`;
 }
 
 const media = {
