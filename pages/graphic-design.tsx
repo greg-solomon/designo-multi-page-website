@@ -12,8 +12,7 @@ const WebDesignPage: FC = ({}) => {
   return (
     <>
       <Head>
-        <title>Frontend Mentor | Designo Agency Website Challenge</title>
-        <link rel="icon" href="/assets/favicon-32x32.png" />
+        <title>Graphic Design | Designo Agency Website Challenge</title>
       </Head>
       <Main>
         <GenericLanding

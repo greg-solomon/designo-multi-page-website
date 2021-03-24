@@ -67,7 +67,9 @@ const LocationItem: FC<ValueItemProps> = ({ title, img, backdrop, id }) => {
           {title}
         </Heading>
         <Link href={`/locations#${id}`}>
-          <Button variant="dark">See Location</Button>
+          <a>
+            <Button variant="dark">See Location</Button>
+          </a>
         </Link>
       </div>
     </Article>

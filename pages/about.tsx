@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import Head from "next/head";
 import styled from "styled-components";
 import { AboutDeal } from "../components/about/AboutDeal";
 import { AboutLanding } from "../components/about/AboutLanding";
@@ -8,6 +9,9 @@ import { Locations } from "../components/shared/Locations";
 const AboutPage: FC = ({}) => {
   return (
     <Main>
+      <Head>
+        <title>About | Designo Agency Website Challenge</title>
+      </Head>
       <AboutLanding />
       <svg
         width="1006"

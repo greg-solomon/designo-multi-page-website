@@ -6,7 +6,7 @@ const LocationsPage: FC = ({}) => {
   return (
     <main>
       <Head>
-        <title>Locations | Designo</title>
+        <title>Locations | Designo Agency Website Challenge</title>
       </Head>
       <Location
         officeAddress="3886 Wellington Street"

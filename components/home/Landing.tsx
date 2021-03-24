@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Link from "next/link";
 import { BodyText } from "../ui/BodyText";
 import { Button } from "../ui/Button";
 import { Heading } from "../ui/Heading";
@@ -23,7 +24,11 @@ export const Landing: React.FC<LandingProps> = ({}) => {
           <br />
           Find out more about our services.
         </BodyText>
-        <Button>Learn More</Button>
+        <Link href="/about">
+          <a>
+            <Button>Learn More</Button>
+          </a>
+        </Link>
       </div>
       <img
         src="/assets/home/desktop/image-hero-phone.png"
