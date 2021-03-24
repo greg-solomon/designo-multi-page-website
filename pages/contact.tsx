@@ -15,4 +15,5 @@ const ContactPage: FC = ({}) => {
 const Main = styled.main`
   position: relative;
 `;
+
 export default ContactPage;

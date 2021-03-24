@@ -19,7 +19,9 @@ export const CTA: FC = ({}) => {
           </BodyText>
         </div>
         <Link href="/contact">
-          <Button>Get in Touch</Button>
+          <a>
+            <Button>Get in Touch</Button>
+          </a>
         </Link>
       </div>
       <img src="/assets/shared/desktop/bg-pattern-call-to-action.svg" />
