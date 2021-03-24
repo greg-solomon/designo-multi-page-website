@@ -47,6 +47,7 @@ export const ContactForm: FC = ({}) => {
           type="email"
           value={email}
           onChange={emailHandlers.onChange}
+          errorMessage="Please use a valid email address"
           required
         />
         <Input

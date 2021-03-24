@@ -7,18 +7,19 @@ type DefaultInputProps = React.InputHTMLAttributes<
 
 interface InputProps extends DefaultInputProps {
   textarea?: boolean;
+  errorMessage?: string;
 }
 
-export const Input: React.FC<InputProps> = ({ textarea = false, ...props }) => {
+export const Input: React.FC<InputProps> = ({
+  textarea = false,
+  errorMessage = "Can't be empty",
+  ...props
+}) => {
   const [isInvalid, setInvalid] = useState(false);
 
   const onInvalid = (event) => {
     event.preventDefault();
-    if (event.target.validity.valueMissing) {
-      event.target.setCustomValidity("Can't be empty");
-      setInvalid(true);
-    } else if (!event.target.validity.valid) {
-      event.target.setCustomValidity("Invalid input");
+    if (event.target.validity.valueMissing || !event.target.validity.valid) {
       setInvalid(true);
     }
   };
@@ -48,7 +49,7 @@ export const Input: React.FC<InputProps> = ({ textarea = false, ...props }) => {
       )}
       {isInvalid && (
         <span className="inp-validation">
-          <em>Can't be empty</em>
+          <em>{errorMessage}</em>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
             <g fill="none" fillRule="evenodd">
               <circle cx="10" cy="10" r="10" fill="#FFF" />
