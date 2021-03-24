@@ -1,12 +1,13 @@
 import React, { FC } from "react";
-import { BodyText } from "../ui/BodyText";
-import { Heading } from "../ui/Heading";
 import styled from "styled-components";
+import Link from "next/link";
+import { Heading } from "../ui/Heading";
 import { Button } from "../ui/Button";
 interface ValueItemProps {
   title: string;
   img: string;
   backdrop: number;
+  id: string;
 }
 
 export const Locations: FC = ({}) => {
@@ -15,16 +16,19 @@ export const Locations: FC = ({}) => {
       title: "Canada",
       img: "/assets/shared/desktop/illustration-canada.svg",
       backdrop: 1,
+      id: "canada",
     },
     {
       title: "Australia",
       img: "/assets/shared/desktop/illustration-australia.svg",
       backdrop: 2,
+      id: "australia",
     },
     {
       title: "United Kingdom",
       img: "/assets/shared/desktop/illustration-united-kingdom.svg",
       backdrop: 3,
+      id: "uk",
     },
   ];
   return (
@@ -51,7 +55,7 @@ const Section = styled.section`
   }
 `;
 
-const LocationItem: FC<ValueItemProps> = ({ title, img, backdrop }) => {
+const LocationItem: FC<ValueItemProps> = ({ title, img, backdrop, id }) => {
   return (
     <Article>
       <div className="img-wrap">
@@ -62,7 +66,9 @@ const LocationItem: FC<ValueItemProps> = ({ title, img, backdrop }) => {
         <Heading variant="tertiary" emphasis>
           {title}
         </Heading>
-        <Button variant="dark">See Location</Button>
+        <Link href={`/locations#${id}`}>
+          <Button variant="dark">See Location</Button>
+        </Link>
       </div>
     </Article>
   );

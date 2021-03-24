@@ -13,6 +13,7 @@ interface LocationProps {
   country: string;
   reverse?: boolean;
   coords: [number, number];
+  id: string;
 }
 
 export const Location: React.FC<LocationProps> = ({
@@ -24,9 +25,10 @@ export const Location: React.FC<LocationProps> = ({
   country,
   reverse = false,
   coords,
+  id,
 }) => {
   return (
-    <Container reverse={reverse}>
+    <Container reverse={reverse} id={id}>
       <div className="map-container">
         <MapComponent coords={coords} title={officeTitle} />
       </div>

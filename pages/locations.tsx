@@ -16,6 +16,7 @@ const LocationsPage: FC = ({}) => {
         email="contact@designo.co"
         country="Canada"
         coords={[43.64818, -79.37575]}
+        id="canada"
       />
       <Location
         officeAddress="19 Balonne Street"
@@ -26,6 +27,7 @@ const LocationsPage: FC = ({}) => {
         country="Australia"
         reverse={true}
         coords={[-30.32953, 149.78819]}
+        id="australia"
       />
       <Location
         officeAddress="13 Colorado Way"
@@ -35,6 +37,7 @@ const LocationsPage: FC = ({}) => {
         email="contact@designo.uk"
         country="United Kingdom"
         coords={[40.51428, -107.5474]}
+        id="uk"
       />
 
       <CTA />
