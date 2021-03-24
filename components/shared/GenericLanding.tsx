@@ -7,10 +7,22 @@ interface GenericLandingProps {
   title: string;
   body: string;
 }
-export const GenericLanding: FC<GenericLandingProps> = ({ title, body }) => {
+export const GenericLanding: FC<GenericLandingProps> = ({
+  title,
+  body,
+  children,
+}) => {
   return (
     <Container>
-      <img src="/assets/web-design/desktop/bg-pattern-intro-web.svg" />
+      <img
+        src="/assets/shared/mobile/bg-pattern-design-pages-intro-mobile.svg"
+        className="landing-bg-mobile"
+      />
+      <img
+        src="/assets/shared/tablet/bg-pattern-design-pages-intro-tablet.svg"
+        className="landing-bg-tablet"
+      />
+      {children}
       <div>
         <Heading color="light">{title}</Heading>
         <BodyText color="light">{body}</BodyText>
@@ -22,9 +34,9 @@ export const GenericLanding: FC<GenericLandingProps> = ({ title, body }) => {
 const Container = styled.div`
   width: 100%;
   max-width: 1110px;
-  min-height: 292px;
   background-color: ${({ theme }) => theme.primary.main};
   text-align: center;
+  height: 320px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,33 +46,44 @@ const Container = styled.div`
   margin-bottom: 6.25rem;
   z-index: -2;
   p {
-    max-width: 60%;
+    max-width: 400px;
     text-align: center;
     margin: 0 auto;
   }
-  img {
+
+  .landing-bg-tablet,
+  .landing-bg-mobile {
     position: absolute;
+    z-index: -1;
+  }
+
+  .landing-bg-tablet {
+    display: none;
+  }
+
+  .landing-bg-mobile {
     top: 0;
     right: 0;
-    z-index: -1;
   }
 
   ${({ theme }) => theme.breakpoints.tablet} {
     width: 87.5%;
     padding: 0 9rem;
     border-radius: 15px;
+    height: 252px;
 
-    img {
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
+    .landing-bg-mobile {
+      display: none;
+    }
+
+    .landing-bg-tablet {
+      display: block;
     }
   }
 
-  ${({ theme }) => theme.breakpoints.tablet} {
-    img {
-      left: 60%;
-      top: 50%;
+  ${({ theme }) => theme.breakpoints.desktop} {
+    .landing-bg-tablet {
+      display: none;
     }
   }
 `;

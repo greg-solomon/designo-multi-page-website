@@ -12,7 +12,10 @@ export const Header: FC = () => {
       <Styled>
         <Navigation>
           <Link href="/">
-            <img src="/assets/shared/desktop/logo-dark.png" />
+            <img
+              src="/assets/shared/desktop/logo-dark.png"
+              style={{ cursor: "pointer" }}
+            />
           </Link>
           <ul className="desktop-tablet-nav-list">
             <li>
@@ -37,7 +40,7 @@ export const Header: FC = () => {
           </MenuButton>
         </Navigation>
       </Styled>
-      {toggle && <MobileNavigation />}
+      {toggle && <MobileNavigation handleClose={() => setToggle(false)} />}
     </>
   );
 };
@@ -102,18 +105,18 @@ const MenuButton = styled.button`
   }
 `;
 
-const MobileNavigation: FC = () => {
+const MobileNavigation: FC<{ handleClose: () => void }> = ({ handleClose }) => {
   return (
     <Background>
       <MobileMenu>
         <ul className="mobile-nav-list">
-          <li>
+          <li onClick={handleClose}>
             <Link href="/about">Our Company</Link>
           </li>
-          <li>
+          <li onClick={handleClose}>
             <Link href="/locations">Locations</Link>
           </li>
-          <li>
+          <li onClick={handleClose}>
             <Link href="/contact">Contact</Link>
           </li>
         </ul>
@@ -127,6 +130,8 @@ const Background = styled.div`
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   width: 100%;
+
+  z-index: 40;
 `;
 
 const MobileMenu = styled.div`

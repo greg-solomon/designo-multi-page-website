@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { FC } from "react";
 import styled from "styled-components";
 
@@ -10,9 +11,15 @@ export const Footer: FC = ({}) => {
             <img src="/assets/shared/desktop/logo-light.png" />
           </div>
           <ul>
-            <li>Our Company</li>
-            <li>Locations</li>
-            <li>Contact</li>
+            <li>
+              <Link href="/about">Our Company</Link>
+            </li>
+            <li>
+              <Link href="/locations">Locations</Link>
+            </li>
+            <li>
+              <Link href="/contact">Contact</Link>
+            </li>
           </ul>
         </nav>
         <nav className="footer-nav">
@@ -20,9 +27,15 @@ export const Footer: FC = ({}) => {
             <img src="/assets/shared/desktop/logo-light.png" />
           </div>
           <ul>
-            <li>Our Company</li>
-            <li>Locations</li>
-            <li>Contact</li>
+            <li>
+              <Link href="/about">Our Company</Link>
+            </li>
+            <li>
+              <Link href="/locations">Locations</Link>
+            </li>
+            <li>
+              <Link href="/contact">Contact</Link>
+            </li>
           </ul>
         </nav>
         <div className="footer-bottom">

@@ -14,6 +14,7 @@ const theme = {
     main: "#E7816B",
     dark: "#1D1C1E",
     light: "#FFFFFF",
+    cool: "#fdf3f0",
   },
   secondary: {
     main: "#FFAD9B",

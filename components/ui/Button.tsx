@@ -40,5 +40,6 @@ const Styled = styled.button<{ variant: "light" | "dark" }>`
   &:focus {
     background-color: ${({ theme }) => theme.secondary.main};
     color: ${({ theme }) => theme.primary.light};
+    outline: none;
   }
 `;

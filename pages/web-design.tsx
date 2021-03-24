@@ -14,11 +14,26 @@ const WebDesignPage: FC = ({}) => {
         <title>Frontend Mentor | Designo Agency Website Challenge</title>
         <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
-      <main>
+      <Main>
         <GenericLanding
           title="Web Design"
           body="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
-        />
+        >
+          <LandingDesktopSVG src="/assets/web-design/desktop/bg-pattern-intro-web.svg" />
+        </GenericLanding>
+        <svg
+          width="1006"
+          height="594"
+          xmlns="http://www.w3.org/2000/svg"
+          className="leaf "
+        >
+          <path
+            d="M297 0h412c164.029 0 297 132.971 297 297S873.029 594 709 594H0V297C0 132.971 132.971 0 297 0z"
+            fill="#F1F3F5"
+            fillRule="evenodd"
+            opacity=".502"
+          />
+        </svg>
         <CaseStudyGrid>
           <CaseStudy
             title="Express"
@@ -56,11 +71,28 @@ const WebDesignPage: FC = ({}) => {
           <GraphicDesignGridItem />
         </ServiceGrid>
         <CTA />
-      </main>
+      </Main>
     </>
   );
 };
 
+const Main = styled.main`
+  .leaf {
+    display: none;
+    position: absolute;
+    z-index: -40;
+    top: 250px;
+    left: 0;
+  }
+  ${({ theme }) => theme.breakpoints.desktop} {
+    padding-top: 1.5rem;
+  }
+  ${({ theme }) => theme.breakpoints.desktop} {
+    .leaf {
+      display: block;
+    }
+  }
+`;
 export const CaseStudyGrid = styled.section`
   display: grid;
   max-width: 1110px;
@@ -88,6 +120,16 @@ export const ServiceGrid = styled.section`
   ${({ theme }) => theme.breakpoints.desktop} {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1.875rem;
+  }
+`;
+
+const LandingDesktopSVG = styled.img`
+  display: none;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  ${({ theme }) => theme.breakpoints.desktop} {
+    display: block;
   }
 `;
 export default WebDesignPage;

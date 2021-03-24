@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { FC } from "react";
 import styled from "styled-components";
 import { BodyText } from "../ui/BodyText";
@@ -17,7 +18,9 @@ export const CTA: FC = ({}) => {
             how our expertise can help your business grow.
           </BodyText>
         </div>
-        <Button>Get in Touch</Button>
+        <Link href="/contact">
+          <Button>Get in Touch</Button>
+        </Link>
       </div>
       <img src="/assets/shared/desktop/bg-pattern-call-to-action.svg" />
     </Wrapper>
@@ -37,7 +40,6 @@ const Wrapper = styled.article`
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-
   .cta-content {
     align-items: center;
     display: flex;

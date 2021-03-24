@@ -58,7 +58,7 @@ const Container = styled.div`
 `;
 
 const Info = styled.div`
-  background-color: #fdf3f0;
+  background-color: ${({ theme }) => theme.primary.cool};
   padding-top: 2.25rem;
   text-align: center;
   width: 100%;
