@@ -15,6 +15,7 @@ export const Header: FC = () => {
             <img
               src="/assets/shared/desktop/logo-dark.png"
               style={{ cursor: "pointer" }}
+              alt="Logo"
             />
           </Link>
           <ul className="desktop-tablet-nav-list">

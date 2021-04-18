@@ -30,7 +30,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           <link rel="icon" href="/assets/favicon-32x32.png" />
         </Head>

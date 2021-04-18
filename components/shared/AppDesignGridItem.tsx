@@ -14,7 +14,10 @@ export const AppDesignGridItem: FC<{ css?: CSSProp | CSSObject }> = ({
         </Heading>
         <ViewPrompt>
           <p>View Projects</p>
-          <img src="/assets/shared/desktop/icon-right-arrow.svg" />
+          <img
+            src="/assets/shared/desktop/icon-right-arrow.svg"
+            alt="Right Arrow Icon"
+          />
         </ViewPrompt>
       </Item>
     </Link>

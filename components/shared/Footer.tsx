@@ -8,7 +8,7 @@ export const Footer: FC = ({}) => {
       <Content>
         <nav className="mobile-footer-nav">
           <div>
-            <img src="/assets/shared/desktop/logo-light.png" />
+            <img src="/assets/shared/desktop/logo-light.png" alt="Logo" />
           </div>
           <ul>
             <li>
@@ -24,7 +24,7 @@ export const Footer: FC = ({}) => {
         </nav>
         <nav className="footer-nav">
           <div>
-            <img src="/assets/shared/desktop/logo-light.png" />
+            <img src="/assets/shared/desktop/logo-light.png" alt="Logo" />
           </div>
           <ul>
             <li>
