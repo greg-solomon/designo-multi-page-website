@@ -41,8 +41,6 @@ Users should be able to:
 - Website - [Greg Solomon](https://www.gregsolomon.dev)
 - Frontend Mentor - [@greg-solomon](https://www.frontendmentor.io/profile/greg-solomon)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
 ## Acknowledgments
 
 Thanks to [this](https://github.com/colbyfayock/next-leaflet-starter) repository for helping me integrate Leaflet into NextJS
